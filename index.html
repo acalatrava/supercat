@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperCat Pipe Runner</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        canvas {
+            display: block;
+        }
+
+        /* Style for the restart button */
+        #restartButton {
+            position: fixed;
+            /* Position relative to viewport */
+            top: 20px;
+            /* Distance from top */
+            right: 20px;
+            /* Distance from right */
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            z-index: 10;
+            /* Ensure it's above the canvas */
+        }
+
+        #restartButton:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* Style for GAME OVER message */
+        #gameOverMessage {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* Center horizontally and vertically */
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px 50px;
+            font-size: 48px;
+            font-weight: bold;
+            border-radius: 10px;
+            z-index: 20;
+            /* Above button and canvas */
+            display: none;
+            /* Hidden initially */
+            text-align: center;
+        }
+
+        /* Style for YOU WIN message */
+        #winMessage {
+            /* Reuse similar styles from GAME OVER */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            background-color: rgba(0, 128, 0, 0.8);
+            /* Greenish background */
+            padding: 30px 50px;
+            font-size: 48px;
+            font-weight: bold;
+            border-radius: 10px;
+            z-index: 20;
+            display: none;
+            /* Hidden initially */
+            text-align: center;
+        }
+
+        /* Styles for On-Screen Controls */
+        .controlButton {
+            position: fixed;
+            bottom: 20px;
+            width: 80px;
+            /* Adjust size as needed */
+            height: 80px;
+            background-color: rgba(100, 100, 100, 0.6);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            /* Make them round */
+            cursor: pointer;
+            display: flex;
+            /* Center text inside */
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            /* Above canvas, below messages */
+            user-select: none;
+            /* Prevent text selection on tap */
+            -webkit-user-select: none;
+            /* Safari */
+            -ms-user-select: none;
+            /* IE 10+ */
+        }
+
+        #leftButton {
+            left: 30px;
+        }
+
+        #rightButton {
+            right: 30px;
+        }
+
+        .controlButton:active {
+            background-color: rgba(150, 150, 150, 0.8);
+            /* Feedback on press */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Add the YOU WIN message (hidden initially) -->
+    <div id="winMessage">¡HAS GANADO!</div>
+
+    <!-- Add the GAME OVER message (hidden initially) -->
+    <div id="gameOverMessage">GAME OVER</div>
+
+    <!-- Add the restart button -->
+    <button id="restartButton">Reiniciar</button>
+
+    <!-- Add On-Screen Controls -->
+    <button id="leftButton" class="controlButton">&lt;</button>
+    <button id="rightButton" class="controlButton">&gt;</button>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+    <script>
+        const randNumber = Math.random();
+    </script>
+    <script type="module" src="main.js?randNumber=1dssdsdssssdsdsss" + randNumber></script>
+</body>
+
+</html>
